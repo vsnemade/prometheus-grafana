@@ -5,9 +5,12 @@ a Java Spring Boot microservice using **Prometheus**, **Grafana**, and
 **Micrometer**, all running on a **Kubernetes cluster created with KIND
 (Kubernetes-in-Docker)** on a Windows machine.
 
+**For Grafana, we can download readymade dashboard templates**
+
+![Grafana](screenshots/grafana.png)
 ![Springboot prometheus api](screenshots/spring-boot-prometheus.png)
 ![Prometheus query api](screenshots/prometheus.png)
-![Grafana](screenshots/grafana.png)
+
 ------------------------------------------------------------------------
 
 # 📌 Prerequisites
