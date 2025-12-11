@@ -1,5 +1,9 @@
 # Prometheus + Grafana + Spring Boot Micrometer Hands-On (KIND on Windows)
 
+For monitoring(http requests, cpu usage, threads usage, memory usage, etc) of services, we can use Prometheus and Grafana. Prometheus captures and stores all metrics in its time-series DB and Grafana presents these metrics as visualize dashboard.
+
+To make it work in springboot services, we need to add micrometer prometheus dependency that enables the /actuator/prometheus endpoint where all metrics are exposed in Prometheus format. Prometheus scraps metrics from each service endpoints. As these services will be deployed in K8s, we need to deploy ServiceMonitor so that prometheus can scrap metrics to its server to store it in time-series db. Grafana is connected to prometheus server from where it gets metrics feed and it presents it on its UI. Usually we don't have create dashboard panels in Grafana as we can import readymade dashboard templates.
+
 This repository contains a complete end-to-end hands-on guide to monitor
 a Java Spring Boot microservice using **Prometheus**, **Grafana**, and
 **Micrometer**, all running on a **Kubernetes cluster created with KIND
